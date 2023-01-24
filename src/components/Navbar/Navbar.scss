@@ -1,0 +1,246 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.nav {
+  &-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding-top: 3rem;
+    @include respond(phone) {
+      display: none;
+    }
+
+    &-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 70%;
+      &-item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &-link {
+          & > * {
+            margin-left: 1rem;
+
+            text-transform: uppercase;
+            color: $gray;
+            font-size: 1.6rem;
+            font-weight: 400;
+            transition: 0.3s ease-in-out;
+            text-decoration: none;
+            &:hover {
+              color: $dark-blue;
+            }
+          }
+        }
+        & > img {
+          height: 1.8rem;
+          fill: #dce0df;
+          color: red;
+          &:hover {
+            fill: $dark-blue;
+          }
+        }
+      }
+    }
+    &-content {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      &-search {
+        display: flex;
+        align-items: center;
+        & > input {
+          margin-right: -2.7rem;
+          padding: 0.4rem 2rem;
+          border-radius: 2rem;
+          border: 1px solid #012d98;
+          &:focus {
+            outline: none;
+          }
+        }
+        & > img {
+          cursor: pointer;
+        }
+      }
+      &-icons {
+        display: flex;
+        align-items: center;
+        & > * {
+          margin-left: 1rem;
+          height: 2rem;
+          cursor: pointer;
+        }
+      }
+      &-profile {
+        & > img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+//  Responsive Menu
+
+.responsive-topbar {
+  display: none;
+  z-index: 1000000;
+  @include respond(phone) {
+    display: block;
+    height: 7vh;
+    padding: 0rem 1rem;
+
+    width: 100%;
+
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-search {
+        display: flex;
+        align-items: center;
+        width: 60%;
+
+        & > input {
+          font-size: 1.5rem;
+          width: 70%;
+          margin: auto;
+          margin-right: -2.7rem;
+          padding: 0.4rem 2rem;
+          border-radius: 2rem;
+          border: 1px solid #012d98;
+          color: $blue;
+          &:focus {
+            outline: none;
+          }
+        }
+        & > img {
+          cursor: pointer;
+        }
+      }
+      &-content {
+        display: flex;
+        align-items: center;
+
+        &-icons {
+          display: flex;
+          align-items: center;
+          margin-right: 2rem;
+          & > * {
+            margin-left: 2rem;
+            height: 2rem;
+          }
+        }
+        &-profile {
+          & > img {
+            height: 2.5rem;
+          }
+        }
+      }
+      &-hamburger {
+        margin-top: -1rem;
+        font-size: 4rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+.act {
+  background-color: blue;
+}
+
+// Side Menu
+
+.side_menu {
+  &-inactive {
+    width: 80px;
+
+    .side_menu-top-toggle {
+      right: -55px;
+    }
+    .side_menu-top-menu-item-text {
+      //   color: red;
+      display: none;
+    }
+  }
+}
+
+.res-inactive {
+  display: none;
+}
+
+// Responsive scss
+
+.responsive {
+  position: relative;
+  position: fixed;
+  height: 100vh;
+  background-image: $primary;
+  width: 55%;
+  padding: 2rem;
+  margin-left: -1rem;
+  margin-top: -7rem;
+  transition: all 0.2s ease-in-out;
+
+  &-toggle {
+    float: right;
+    font-size: 3.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  &-menu {
+    margin-top: 10rem;
+    &-item {
+      margin: 0.8rem 0rem;
+      padding: 0.8rem 1rem;
+      text-transform: uppercase;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      & > * {
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+        font-weight: 500;
+      }
+      &:hover {
+        transition: 0.2s ease-in-out;
+
+        background-color: white;
+        & > * {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+// Log out btn Style
+.btn-logout {
+  & > * {
+    margin-right: 1.5rem;
+    background-color: $blue;
+    color: white;
+    border: none;
+    border-radius: 0.7rem;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    font-family: "Oswald";
+    &:hover {
+      color: $blue;
+      border: 1.5px solid $blue;
+      background-color: white;
+      padding: 0.9rem 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import "../../scss/variable";
+.toshi {
+  // Heading {
+
+  &-heading {
+    width: 85%;
+    margin: auto;
+    &-container {
+      display: flex;
+      align-items: center;
+
+      &-left {
+        display: flex;
+        align-items: center;
+        margin-right: 4rem;
+        & > img {
+          margin-right: 1.1rem;
+        }
+        &-head {
+          font-family: "Roboto";
+          padding-top: 0.5rem;
+
+          & > h1 {
+            color: $dark-blue;
+            font-weight: 900;
+            font-size: 3.7rem;
+          }
+
+          & > p {
+            margin-top: -1rem;
+            font-size: 1.2rem;
+
+            color: $blue;
+          }
+        }
+      }
+
+      &-right {
+        &-first {
+          margin-right: 1rem;
+
+          border-radius: 0.4rem;
+          border: none;
+          padding: 0.5rem 1rem;
+          font-size: 1.3rem;
+          font-weight: 500;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        &-second {
+          border-radius: 0.4rem;
+          margin-right: 1rem;
+
+          border: none;
+          padding: 0.5rem 2.5rem;
+          font-size: 1.3rem;
+          font-weight: 500;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+
+  // container
+
+  &-container {
+    width: 95%;
+    margin: auto;
+    &-progress {
+      width: 60%;
+      margin: auto;
+
+      &-top {
+        padding-left: 3rem;
+        padding-right: 1.5rem;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        & > h6 {
+          font-weight: 500;
+          font-size: 1.4rem;
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.progress {
+  background-color: $dark-blue;
+  border-radius: 1.5rem;
+
+  &-bar {
+    border-radius: 1.5rem;
+    background-color: #2e43b6;
+    width: attr(data-count);
+  }
+}

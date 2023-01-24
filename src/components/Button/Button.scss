@@ -1,0 +1,31 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.btn-primary {
+  background-image: $primary;
+  border: none;
+  border-radius: 2rem;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    color: #012d98;
+    border: 1.5px solid #012d98;
+    background-color: white;
+    background-image: none;
+  }
+}
+.small-btn {
+  padding: 0.6rem 7rem;
+}
+
+.large-btn {
+  width: 100%;
+  padding: 0.6rem 4rem;
+  @include respond(phone) {
+    padding: 0.6rem 8rem;
+  }
+}

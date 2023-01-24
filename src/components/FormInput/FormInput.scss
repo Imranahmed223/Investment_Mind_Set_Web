@@ -1,0 +1,45 @@
+@import "../../scss/variable";
+.form-input {
+  margin-top: 0.5rem;
+  width: 100%;
+  background-color: transparent;
+
+  padding: 0.5rem 0px;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-bottom: 2px solid #1f198953;
+  color: #0e0e47;
+  font-size: 1.1rem;
+  font-family: "Oswald";
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-input-placeholder {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    color: #1e1989;
+    opacity: 0.4;
+  }
+
+  &:-ms-input-placeholder {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    color: #1e1989;
+    opacity: 0.4;
+  }
+
+  &::placeholder {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    color: #1e1989;
+    opacity: 0.4;
+  }
+}
+.form-error {
+  position: absolute;
+  margin-top: -0.5rem;
+  color: red;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Oswald";
+}

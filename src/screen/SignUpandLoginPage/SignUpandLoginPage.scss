@@ -1,0 +1,72 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.signpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald";
+  &-container {
+    width: 60%;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    @include respond(phone) {
+      width: 100%;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-logo {
+      & > img {
+        height: 7rem;
+      }
+    }
+    &-content {
+      margin-top: 3rem;
+      width: 60%;
+      @include respond(phone) {
+        width: 100%;
+      }
+
+      &-signup {
+        width: 80%;
+        margin: auto;
+        // &-flex {
+        //   display: flex;
+        //   align-items: center;
+        // }
+        &-btn {
+          margin-top: 3rem;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        &-bottom {
+          margin-top: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          & > p {
+            margin: 1rem 0rem;
+            color: #707070;
+            font-size: 1.2rem;
+          }
+          &-icons {
+            width: 30%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}
+
+#signpage-container-content-tab {
+  font-size: 1.5rem;
+}

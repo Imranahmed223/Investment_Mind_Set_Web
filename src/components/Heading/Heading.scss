@@ -1,0 +1,9 @@
+@import "../../scss/variable";
+.heading {
+  & > h1 {
+    font-size: 2rem;
+    color: $blue;
+    margin: 4rem 0rem;
+    font-weight: 700;
+  }
+}

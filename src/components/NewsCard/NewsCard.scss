@@ -1,0 +1,53 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+
+.newscard {
+  &-container {
+    border-radius: 1.5rem;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    background-image: $primary;
+    padding-right: 1rem;
+    &-img {
+      & > img {
+        height: 13.7rem;
+        width: 15rem;
+        object-fit: cover;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+      }
+    }
+    &-content {
+      // background-image: $primary;
+
+      width: 55%;
+      
+      margin: 0rem 1.5rem;
+      & > h1 {
+        color: white;
+        margin: 1rem 0rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+      }
+      &-flex {
+        display: flex;
+        align-items: center;
+        & > p {
+          color: white;
+          font-size: 1.4rem;
+          font-weight: 200;
+          list-style: 0.5rem;
+        }
+        & > img {
+          margin-top: -3rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.newscard-arrow {
+  cursor: pointer;
+}
